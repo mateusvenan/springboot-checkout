@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="panel panel-default" ng-repeat="purchase in purchases">
+		<div class="panel-heading">
+       		<label for="amount">Total</label>
+       		<span id="amount" type="number" step="0" ng-bind="::purchase.totalValue | currency" ></span>
+     	
+       		<label for="amount" ng-if="purchase.discountValue > 0">Discount</label>
+       		<span id="amount" type="number" ng-if="purchase.discountValue > 0" class="label label-danger" step="0" ng-bind="::purchase.discountValue | currency" ></span>
+     	</div>
+     	<div class="panel-body">
+			<table class="table">
+			<thead>
+				<tr>
+					<th>Product</th>
+					<th>Amount</th>
+					<th>Unit Price</th>
+					<th>Total Price</th>
+					<th>Discount Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in purchase.items">
+					<td ng-bind="::item.product.description"></td>
+					<td ng-bind="::item.amount"></td>
+					<td ng-bind="::item.unitValue | currency"></td>
+					<td ng-bind="::item.totalValue | currency"></td>
+					<td><span ng-bind="::item.discountValue | currency"></span>
+					</td>
+				</tr>	
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>Checkout System</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" >
+<link rel="stylesheet" href="css/bootstrap-theme.min.css" >
+</head>
+<body ng-app="checkout-app">
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+		      <a class="navbar-brand" href="#/store">Store</a>
+		    </div>
+		    <div class="nav navbar-nav" >
+		      <ul class="nav navbar-nav">
+		        <li><a href="#/store">Buy Items</a></li>
+		        <li><a href="#/purchases">Purchases</a></li>
+		      </ul>
+		    </div>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+	          		<a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrative <span class="caret"></span></a>
+	          		<ul class="dropdown-menu">
+					   <li><a href="#/products">Products</a></li>
+					   <li><a href="#/offers">Offers</a></li>
+					</ul>
+	          	</li>
+			</ul>
+		</div>
+	</nav>
+	<main ng-view>
+  	</main>
+  
+  <script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="js/vendor/bootstrap.min.js"></script>
+  
+  <script src="js/vendor/angular.min.js" type="text/javascript"></script>
+  <script src="js/vendor/angular-route.min.js" type="text/javascript"></script>
+  
+  <script src="js/app/app.js" type="text/javascript"></script>
+  <script src="js/app/config/routes.js" type="text/javascript"></script>
+  <script src="js/app/service/product-service.js" type="text/javascript"></script>
+  <script src="js/app/service/offer-service.js" type="text/javascript"></script>
+  <script src="js/app/service/checkout-service.js" type="text/javascript"></script>
+  <script src="js/app/controllers/offer-controller.js" type="text/javascript"></script>
+  <script src="js/app/controllers/offer-form-controller.js" type="text/javascript"></script>
+  <script src="js/app/controllers/product-controller.js" type="text/javascript"></script>
+  <script src="js/app/controllers/product-form-controller.js" type="text/javascript"></script>
+  <script src="js/app/controllers/store-controller.js" type="text/javascript"></script>
+  <script src="js/app/controllers/purchase-controller.js" type="text/javascript"></script>
+</body>
+</html>

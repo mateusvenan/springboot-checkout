@@ -1,0 +1,29 @@
+<div class="container">
+<a href="#/new-offer" class="btn btn-info">New</a>
+<div class="card">
+<div class="card-content">
+<table class="table">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Product</th>
+			<th>Require amount</th>
+			<th>Offer type</th>
+			<th>Gift</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="offer in offers">
+			<td><a href="#/edit-offer/{{offer.id}}" ng-bind="offer.id" ></a> </td>
+			<td ng-bind="offer.product.description"></td>
+			<td ng-bind="offer.requiredAmount"></td>
+			<td ng-bind="offer.type"></td>
+			<td ng-bind="offer.gift.description"></td>
+			<td ng-bind="offer.value | number : 2"></td>
+		</tr>	
+	</tbody>
+</table>
+</div>
+</div>
+</div>
