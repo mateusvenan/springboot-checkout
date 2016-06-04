@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: checkout
-Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: mateus
-Implementation-Vendor-Id: br.com.mvenancio
-Build-Jdk: 1.8.0_72
-Created-By: Maven Integration for Eclipse
-Implementation-Vendor: Pivotal Software, Inc.
-
