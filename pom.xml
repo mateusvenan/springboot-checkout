@@ -12,6 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<build>
@@ -19,6 +20,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <executable>true</executable>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
